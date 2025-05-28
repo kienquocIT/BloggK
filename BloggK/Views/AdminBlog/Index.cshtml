@@ -1,0 +1,61 @@
+﻿@model List<BloggK.Models.Domain.BlogPost>
+
+@{
+	ViewData["Title"] = "Blogs - Admin Control";
+}
+
+<div>
+	<h2>Admin Blog Control</h2>
+	<div class="col-md-10">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Heading</th>
+					<th>Page Title</th>
+					<th>Short Description</th>
+					<th>Published Date</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var blog in Model)
+				{
+					var modalId = "deleteModal_" + blog.Id;
+					<tr>
+						<td>@blog.Heading</td>
+						<td>@blog.PageTitle</td>
+						<td>@blog.ShortDescription</td>
+						<td>@blog.PublishedDate.ToString("yyyy-MM-dd")</td>
+						<td>
+							<div class="btn-group gap-1" role="group" aria-label="Basic mixed styles example">
+								<a class="btn btn-primary" asp-action="Edit" asp-route-id="@blog.Id">Edit</a>
+								<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#@modalId">Delete</button>
+							</div>
+						</td>
+					</tr>
+
+					<!-- Modal -->
+					<div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel_@blog.Id" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalLabel_@blog.Id">Confirm Delete</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									Are you sure you want to delete "<strong>@blog.Heading</strong>"?
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+									<a class="btn btn-danger" asp-action="Delete" asp-route-id="@blog.Id">Delete</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</tbody>
+		</table>
+
+		<a href="@Url.Action("Add", "AdminBlog")" class="btn btn-dark">Add New Blog</a>
+	</div>
+</div>

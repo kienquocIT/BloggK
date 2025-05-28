@@ -1,0 +1,53 @@
+﻿@model List<BloggK.Models.Domain.Tag>
+
+@{
+    ViewData["Title"] = "Admin - Tag Manager";
+}
+
+<div class="container">
+    <h2>Tag Manager - Admin feature </h2>
+    <div class="mt-5">
+        <a class="btn btn-dark mb-3" asp-action="Add">Add Tag</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Display Name</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tag in Model)
+                {
+                    var modalId = "deleteModal_" + tag.Id;
+                    <tr>
+                        <td>@tag.Id</td>
+                        <td>@tag.Name</td>
+                        <td>@tag.DisplayName</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#@modalId">Delete</a>
+                        </td>
+                    </tr>
+                    <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel_@tag.Id" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel_@tag.Id">Do you want to Delete?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@tag.Id">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

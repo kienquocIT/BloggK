@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|c:\\users\\admin\\kienquoc\\job\\project\\mvcblog\\bloggk\\bloggk\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|solutionrelative:bloggk\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|c:\\users\\admin\\kienquoc\\job\\project\\mvcblog\\bloggk\\bloggk\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|solutionrelative:bloggk\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|c:\\users\\admin\\kienquoc\\job\\project\\mvcblog\\bloggk\\bloggk\\views\\adminblog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|solutionrelative:bloggk\\views\\adminblog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|c:\\users\\admin\\kienquoc\\job\\project\\mvcblog\\bloggk\\bloggk\\controllers\\adminblogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|solutionrelative:bloggk\\controllers\\adminblogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|c:\\users\\admin\\kienquoc\\job\\project\\mvcblog\\bloggk\\bloggk\\views\\adminblog\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A806D568-7529-45DA-B6C1-06D19C73D946}|BloggK\\BloggK.csproj|solutionrelative:bloggk\\views\\adminblog\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminBlogController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Controllers\\AdminBlogController.cs",
+              "RelativeDocumentMoniker": "BloggK\\Controllers\\AdminBlogController.cs",
+              "ToolTip": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Controllers\\AdminBlogController.cs",
+              "RelativeToolTip": "BloggK\\Controllers\\AdminBlogController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwFAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T09:15:20.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Views\\AdminBlog\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BloggK\\Views\\AdminBlog\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Views\\AdminBlog\\Edit.cshtml",
+              "RelativeToolTip": "BloggK\\Views\\AdminBlog\\Edit.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwFEAAACdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T09:14:52.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Views\\AdminBlog\\Add.cshtml",
+              "RelativeDocumentMoniker": "BloggK\\Views\\AdminBlog\\Add.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Views\\AdminBlog\\Add.cshtml",
+              "RelativeToolTip": "BloggK\\Views\\AdminBlog\\Add.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T09:11:53.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BloggK\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BloggK\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T04:15:26.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BloggK\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\KIENQUOC\\Job\\Project\\MVCBlog\\BloggK\\BloggK\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BloggK\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T04:08:39.71Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

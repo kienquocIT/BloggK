@@ -1,0 +1,43 @@
+﻿@model BloggK.Models.ViewModels.HomeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-2 mb-4">
+    <h1>Welcome to BloggK</h1>
+</div>
+
+@*Tag*@
+<div class="container d-flex gap-2">
+    @foreach (var tag in Model.Tags)
+    {
+        <a class="btn btn-primary"
+        asp-action="Index"
+        asp-route-tag="@tag.Id">@tag.Name</a>
+    }
+</div>
+
+@*Blog*@
+<div>
+    @if (Model.Posts.Count == 0)
+    {
+        <p class="text-secondary text-center mt-5">No Blogs</p>
+    }
+    @foreach (var blog in Model.Posts)
+    {
+		@if (blog.Visible == false)
+		{
+			continue;
+		}
+        <div class="card my-4">
+            <img src="@blog.FeaturedImageUrl" class="card-img-top small-image" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@blog.PageTitle</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">@blog.PublishedDate</small></p>
+                <a class="link-secondary" asp-action="Details" asp-route-id="@blog.Id">View Detail</a>
+            </div>
+        </div>
+    }
+</div>

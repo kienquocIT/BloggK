@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model BloggK.Models.ViewModels.AddTagRequest
+
+@{
+	ViewData["Title"] = "Admin - Tag Manager";
+}
+
+<div class="container">
+    <h2>Edit Tag - Admin feature </h2>
+    <form method="post" asp-action="Edit" asp-all-route-id="@ViewBag.Id">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name Tag</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" asp-for="Name">
+            <span asp-validation-for="Name" class="text-danger mt-1"></span>
+        </div>
+        <div class="mb-3">
+            <label for="displayName" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="displayName" placeholder="Display Name" asp-for="DisplayName">
+            <span asp-validation-for="DisplayName" class="text-danger mt-1"></span>
+        </div>
+        <button type="submit" class="btn btn-dark w-25 mt-1">Save Changes</button>
+    </form>
+</div>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,119 @@
+﻿@model BloggK.Models.ViewModels.AddBlogRequest
+
+@{
+    ViewData["Title"] = "Add Blog - Admin Control";
+}
+
+<div class="container">
+    <h2>Add Blog - Admin Control</h2>
+
+    <form class="my-4" method="post">
+        <!-- Heading -->
+        <div class="mb-3">
+            <label for="heading" class="form-label">Heading</label>
+            <input type="text" class="form-control" id="heading" asp-for="Heading">
+            <span asp-validation-for="Heading" class="text-danger"></span>
+        </div>
+
+        <!-- Page Title -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Page Title</label>
+            <input type="text" class="form-control" id="title" asp-for="PageTitle">
+            <span asp-validation-for="PageTitle" class="text-danger"></span>
+        </div>
+
+        <!-- Content -->
+        <div class="mb-3">
+            <label for="content" class="form-label">Content</label>
+            <textarea class="form-control" id="content" rows="8" asp-for="Content"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+
+        <!-- Short Description -->
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3" asp-for="ShortDescription"></textarea>
+            <span asp-validation-for="ShortDescription" class="text-danger"></span>
+        </div>
+
+        <!-- Featured Image URL -->
+        <div class="mb-3">
+            <label for="formImage" class="form-label">Featured Image URL</label>
+            <input class="form-control" type="text" id="formImage" asp-for="FeaturedImageUrl">
+            <span asp-validation-for="FeaturedImageUrl" class="text-danger"></span>
+        </div>
+
+        <!-- URL Handle -->
+        <div class="mb-3">
+            <label for="formHandle" class="form-label">URL Handle</label>
+            <input class="form-control" type="text" id="formHandle" asp-for="UrlHandle">
+            <span asp-validation-for="UrlHandle" class="text-danger"></span>
+        </div>
+
+        <!-- Published Date -->
+        <div class="mb-3">
+            <label for="PublishedDate" class="form-label">Published Date</label>
+            <input class="form-control" type="date" asp-for="PublishedDate" />
+            <span asp-validation-for="PublishedDate" class="text-danger"></span>
+        </div>
+
+        <!-- Author -->
+        <div class="mb-3">
+            <label for="Author" class="form-label">Author</label>
+            <input class="form-control" type="text" asp-for="Author" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+
+        <!-- Visible Checkbox -->
+        <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="checkVisible" asp-for="Visible">
+            <label class="form-check-label" for="checkVisible">Visible</label>
+        </div>
+
+        <!-- Tags Selection -->
+        <div class="mb-3">
+            <label class="form-label">Tags</label>
+            <div class="row">
+                @foreach (var tag in (List<BloggK.Models.Domain.Tag>)ViewBag.Tags)
+                {
+					var isSelected = Model.SelectedTags != null && Model.SelectedTags.Contains(tag.Name);
+                    <div class="col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="SelectedTags" value="@tag.Name" id="tag_@tag.Id" @(isSelected ? "checked":"")/>
+                            <label class="form-check-label" for="tag_@tag.Id">@tag.Name</label>
+                        </div>
+                    </div>
+                }
+            </div>
+            <span asp-validation-for="SelectedTags" class="text-danger"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid d-md-flex justify-content-md-end mt-4">
+            <button type="submit" class="btn btn-dark px-5">Post</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script src="https://cdn.tiny.cloud/1/u69qgz93z78k1zmjo7qn8cfb1kokdmnrfov56div383lc213/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#content',
+            height: 400,
+            menubar: false,
+            plugins: [
+                'advlist autolink lists link image charmap preview anchor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table code help wordcount'
+            ],
+            toolbar:
+                'undo redo | formatselect | ' +
+                'bold italic backcolor | alignleft aligncenter ' +
+                'alignright alignjustify | bullist numlist outdent indent | ' +
+                'removeformat | help'
+        });
+    </script>
+}

@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model BloggK.Models.Domain.BlogPost
+
+@{
+	ViewData["Title"] = "Details";
+}
+
+<div class="container mt-4">
+	<h1 class="mb-4 text-primary">@Model.Heading</h1>
+	<h3>@Model.PageTitle</h3>
+	<p><strong>Author:</strong> @Model.Author</p>
+	<p class="text-secondary">Publish date: @Model.PublishedDate</p>
+	<p>@Model.ShortDescription</p>
+	<img src="@Model.FeaturedImageUrl" class="img-fluid medium-image w-100 shadow-sm rounded" alt="...">
+	<p class="mt-4">@Html.Raw(Model.Content)</p>
+	<a href="#" class="text-primary">@Model.UrlHandle</a>
+</div>
